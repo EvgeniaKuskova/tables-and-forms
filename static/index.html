@@ -14,7 +14,7 @@
         <div class="petType">
             <label for="petType">Вид: </label>
             <select name="petType" id="petType" required>
-                <option value="cat">Кошка</option>
+                <option value="cat" selected>Кошка</option>
                 <option value="dog">Собака</option>
                 <option value="tiger">Тигр</option>
             </select>
@@ -22,14 +22,20 @@
         <div class="gender">
             <label for="gender">Пол: </label>
             <select name="gender" id="gender" required>
-                <option value="boy">Мужчина</option>
+                <option value="boy" selected>Мужчина</option>
                 <option value="girl">Женщина</option>
                 <option value="none">Не выбрано</option>
             </select>
         </div>
         <div class="eyeColor">
             <label for="eyeColor">Цвет глаз (в шестнадцатеричной системе счисления): </label>
-            <input type="text" name="eyeColor" id="eyeColor" pattern="^#[0-9A-Fa-f]{6}$"  required />
+            <input
+                    type="text"
+                    name="eyeColor"
+                    id="eyeColor"
+                    pattern="^#[0-9A-Fa-f]{6}$"
+                    value="#000000"
+                    required />
         </div>
         <div class="tailLength">
             <label for="tailLength">Длина хвоста: </label>
@@ -37,26 +43,27 @@
                 type="number"
                 min="7"
                 max="120"
+                value="20"
                 name="tailLength"
                 id="tailLength"
                 required />
         </div>
         <div class="name">
             <label for="name">Твоё имя: </label>
-            <input type="text" name="name" id="name" required />
+            <input type="text" name="name" id="name" value="Аноним" required />
         </div>
         <div class="dateOfBirth">
             <label for="dateOfBirth">Дата рождения: </label>
-            <input type="date" name="dateOfBirth" id="dateOfBirth" required />
+            <input type="date" name="dateOfBirth" id="dateOfBirth" value="1970-01-01" required />
         </div>
         <div class="email">
             <label for="email">Почта: </label>
-            <input type="email" name="email" id="email" required />
+            <input type="email" name="email" id="email" value="example@mail.ru" required />
         </div>
 
         <div class="phone">
             <label for="phone">Телефон: </label>
-            <input type="text" name="phone" id="phone" required />
+            <input type="text" name="phone" id="phone" value="+79001234567" required />
         </div>
 
         <div class="rules">
@@ -72,6 +79,10 @@
 
         <div class="form-example">
             <input type="submit" value="Отправить!" />
+        </div>
+
+        <div class="form-reset">
+            <input type="reset" value="Сбросить">
         </div>
 
     </form>
